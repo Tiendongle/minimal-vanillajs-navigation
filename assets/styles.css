@@ -1,6 +1,9 @@
 :root {
   --activeNavSize: 1;
-  --activeNavCenter: -1000px;
+@font-face {
+  font-family: 'SF Pro Text';
+  src:  url('/assets/fonts/sf-pro-text-regular.ttf') format('ttf'),
+        url('/assets/fonts/sf-pro-text-regular.woff') format('woff');
 }
 
 * {
@@ -8,8 +11,8 @@
 }
 
 body {
-  font-family: sans-serif;
-  font-size: 0.75rem;
+  font-family: "SF Pro Text", "Myriad Set Pro", "SF Pro Icons", "Apple Legacy Chevron", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 16px;
 }
 
 nav {
@@ -55,6 +58,7 @@ nav button {
   background-color: transparent;
   color: silver;
   text-decoration: none;
+  font-size: 13px;
   transition: color 250ms ease-in-out;
   cursor: pointer;
 }
