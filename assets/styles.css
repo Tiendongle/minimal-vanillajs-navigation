@@ -1,0 +1,68 @@
+:root {
+  --activeNavSize: 1;
+  --activeNavCenter: -1000px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 0.75rem;
+}
+
+nav {
+  position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  padding: 8px 0;
+  overflow: hidden;
+}
+
+nav:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 10px;
+  height: 1px;
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: left 500ms ease-in-out, transform 500ms ease-in-out;
+  background-color: black;
+  will-change: transform;
+}
+
+nav:before {
+  transform: translateX(var(--activeNavCenter)) scaleX(var(--activeNavSize));
+}
+
+nav:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: silver;
+  z-index: -1;
+}
+
+nav button {
+  position: relative;
+  border: none;
+  background-color: transparent;
+  color: silver;
+  text-decoration: none;
+  transition: color 250ms ease-in-out;
+  cursor: pointer;
+}
+
+nav button.active {
+  color: black
+}
+
+nav button:hover {
+  color: lightskyblue;
+}
