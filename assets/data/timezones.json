@@ -1,0 +1,32 @@
+{
+  "cities": [
+    {
+      "location": "cupertino",
+      "tz": "America/Los_Angeles"
+    },
+    {
+      "location": "new-york-city",
+      "tz": "America/New_York"
+    },
+    {
+      "location": "london",
+      "tz": "Europe/London"
+    },
+    {
+      "location": "amsterdam",
+      "tz": "Europe/Amsterdam"
+    },
+    {
+      "location": "tokyo",
+      "tz": "Asia/Tokyo"
+    },
+    {
+      "location": "hong-kong",
+      "tz": "Asia/Hong_Kong"
+    },
+    {
+      "location": "sydney",
+      "tz": "Australia/Sydney"
+    }
+  ]
+}
