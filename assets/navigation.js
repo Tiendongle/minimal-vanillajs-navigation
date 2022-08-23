@@ -86,7 +86,7 @@ const activeElement = {
   },
   activeNavSize: (element) => { // SET ANIMATION PROPERTIES
     const {offsetLeft, clientWidth} = element;
-    root.style.setProperty('--activeNavSize', (clientWidth));
+    root.style.setProperty('--activeNavSize', (clientWidth/10));
     root.style.setProperty('--activeNavCenter', `${offsetLeft}px`);
   },
   setTime: (element) => {
@@ -114,6 +114,7 @@ async function init () {
     const initial = navigation?.children?.[0]; // TODO: Should be refactored to set specific city as the initial state
     activeElement.activeNavSize(initial);
     activeElement.setActive(initial);
+    activeElement.setTime(initial);
   }
 };
 

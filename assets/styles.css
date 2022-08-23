@@ -35,9 +35,9 @@ nav:before {
   position: absolute;
   left: 0;
   bottom: 1.25rem;
-  width: 1px;
+  width: 10px;
   height: 1px;
-  transform: scaleX(1);
+  transform: translateX(0) scaleX(1);
   transform-origin: left;
   transition: transform 450ms ease-in-out;
   background-color: black;
