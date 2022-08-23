@@ -1,5 +1,10 @@
 :root {
   --activeNavSize: 1;
+  --activeNavCenter: 0;
+  --hoverColor: rgb(40,125,190);
+  --lightGrey: rgb(173,172,173);
+}
+
 @font-face {
   font-family: 'SF Pro Text';
   src:  url('/assets/fonts/sf-pro-text-regular.ttf') format('ttf'),
@@ -13,14 +18,15 @@
 body {
   font-family: "SF Pro Text", "Myriad Set Pro", "SF Pro Icons", "Apple Legacy Chevron", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: 16px;
+  margin: 145px 24px 0 24px;
 }
 
 nav {
   position: relative;
   display: flex;
-  width: 100%;
   justify-content: space-around;
-  padding: 8px 0;
+  width: 100%;
+  padding: 8px 55px;
   overflow: hidden;
 }
 
@@ -33,7 +39,7 @@ nav:before {
   height: 1px;
   transform: scaleX(1);
   transform-origin: left;
-  transition: left 500ms ease-in-out, transform 500ms ease-in-out;
+  transition: transform 450ms ease-in-out;
   background-color: black;
   will-change: transform;
 }
@@ -48,7 +54,8 @@ nav:after {
   bottom: 0;
   width: 100%;
   height: 1px;
-  background-color: silver;
+  background-color: var(--lightGrey);
+  opacity: 0.5;
   z-index: -1;
 }
 
@@ -56,17 +63,18 @@ nav button {
   position: relative;
   border: none;
   background-color: transparent;
-  color: silver;
+  color: var(--lightGrey);
   text-decoration: none;
   font-size: 13px;
   transition: color 250ms ease-in-out;
   cursor: pointer;
 }
 
-nav button.active {
+nav button.active,
+nav button.active:hover {
   color: black
 }
 
 nav button:hover {
-  color: lightskyblue;
+  color: var(--hoverColor);
 }
