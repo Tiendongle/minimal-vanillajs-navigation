@@ -61,7 +61,7 @@ const activeElement = {
   },
   activeNavSize: (element) => { // SET ANIMATION PROPERTIES
     const {offsetLeft, clientWidth} = element;
-    root.style.setProperty('--activeNavSize', (clientWidth)/10);
+    root.style.setProperty('--activeNavSize', (clientWidth));
     root.style.setProperty('--activeNavCenter', `${offsetLeft}px`);
   }
 }
